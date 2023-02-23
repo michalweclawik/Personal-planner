@@ -126,7 +126,7 @@ export default function Create() {
         </label>
 
         <label>
-          <span>Project category:</span>
+          <span>Holiday status</span>
           <Select
             onChange={(option) => setCategory(option)}
             options={categories}
