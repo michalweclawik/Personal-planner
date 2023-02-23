@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+}
+.App .container {
+  flex-grow: 1;
+  padding: 0 60px;
+}
+@media screen and (max-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+  .App .container {
+    flex-grow: 1;
+    padding: 0 20px;
+  }
+}

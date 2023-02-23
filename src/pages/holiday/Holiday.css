@@ -1,0 +1,76 @@
+.holiday-details {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: start;
+  grid-gap: 60px;
+}
+
+/* holiday summary */
+.holiday-summary {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+}
+.holiday-summary .due-date {
+  margin: 5px 0;
+  font-size: 0.5em;
+  color: var(--title-color);
+}
+.holiday-summary .details {
+  margin: 30px 0;
+  color: var(--text-color);
+  line-height: 1.8em;
+  font-size: 0.9em;
+}
+.holiday-summary h4 {
+  color: var(--text-color);
+  font-size: 0.9em;
+}
+.holiday-summary .assigned-users {
+  display: flex;
+  margin-top: 20px;
+}
+.holiday-summary .assigned-users .avatar {
+  margin-right: 10px;
+}
+.holiday-summary + .btn {
+  margin-top: 20px;
+}
+/* project comments */
+.holiday-comments label {
+  margin-bottom: 0px;
+}
+.holiday-comments textarea {
+  min-height: 40px;
+  font-size: 1.5em;
+}
+.holiday-comments h4 {
+  color: var(--heading-color);
+}
+.holiday-comments li {
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #f2f2f2;
+  margin-top: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+.comment-author {
+  display: flex;
+  align-items: center;
+  color: var(--title-color);
+}
+.comment-author .avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.comment-date {
+  color: var(--text-color);
+  font-size: 0.9em;
+  margin: 4px 0 10px;
+}
+.comment-content {
+  color: var(--text-color);
+  font-size: 0.9em;
+}
