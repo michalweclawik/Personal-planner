@@ -141,7 +141,7 @@ export default function Create() {
           />
         </label>
 
-        <button className="btn">Add Project</button>
+        <button className="btn">Add Holiday</button>
 
         {formError && <p className="error">{formError}</p>}
       </form>

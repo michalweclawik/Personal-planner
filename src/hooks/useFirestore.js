@@ -74,10 +74,13 @@ export const useFirestore = (collect) => {
       dispatch({ type: "ERROR", payload: err.message });
     }
   };
+
+  // update doc
+
   const updateDocument = async (id, updates) => {
     dispatch({ type: "IS_PENDING" });
     try {
-      const updatedDocument = await updateDoc(id, updates);
+      const updatedDocument = await updateDoc(doc(db, collect, id), updates);
       dispatchIfNotCancelled({
         type: "UPDATED_DOCUMENT",
         payload: updatedDocument,
@@ -93,7 +96,7 @@ export const useFirestore = (collect) => {
     dispatch({ type: "IS_PENDING" });
 
     try {
-      await deleteDoc(doc(db, collection, id));
+      await deleteDoc(doc(db, collect, id));
       dispatchIfNotCancelled({ type: "DELETED_DOCUMENT" });
     } catch (err) {
       dispatchIfNotCancelled({ type: "ERROR", payload: "could not delete" });

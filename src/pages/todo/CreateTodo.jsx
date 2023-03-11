@@ -27,12 +27,12 @@ const CreateTodo = () => {
     console.log(todos + "inside");
     await addDocument(todos);
     if (!response.error) {
-      navigate("/");
+      navigate("/todos");
     }
   };
   return (
     <div className="todo">
-      <h2>Type your todo </h2>
+      <h2>Add your todos </h2>
       <form onSubmit={handleSubmit}>
         <label>
           <input
